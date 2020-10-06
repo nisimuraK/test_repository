@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="test_repository" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Al-Sm-Zsv">
+                                <rect key="frame" x="0.0" y="70" width="414" height="653.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="これからジャンケンを開始します" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEm-Ll-DhG">
+                                <rect key="frame" x="0.0" y="743.5" width="414" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHf-9v-IKr">
+                                <rect key="frame" x="0.0" y="800" width="414" height="62"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="ジャンケンする">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="ShuffluAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NIz-ER-bGy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="eEm-Ll-DhG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3sd-Or-Msn"/>
+                            <constraint firstItem="3Al-Sm-Zsv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="70" id="Opr-kl-XVa"/>
+                            <constraint firstItem="3Al-Sm-Zsv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ozk-dk-Doi"/>
+                            <constraint firstItem="hHf-9v-IKr" firstAttribute="top" secondItem="eEm-Ll-DhG" secondAttribute="bottom" constant="30" id="Rj7-km-rnX"/>
+                            <constraint firstItem="eEm-Ll-DhG" firstAttribute="top" secondItem="3Al-Sm-Zsv" secondAttribute="bottom" constant="20" id="UL8-E9-mKV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eEm-Ll-DhG" secondAttribute="trailing" id="aBR-b0-d2K"/>
+                            <constraint firstItem="3Al-Sm-Zsv" firstAttribute="trailing" secondItem="eEm-Ll-DhG" secondAttribute="trailing" id="ckV-3k-Pmr"/>
+                            <constraint firstItem="3Al-Sm-Zsv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dDh-4Z-u05"/>
+                            <constraint firstItem="hHf-9v-IKr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="756" id="gF8-h4-t6y"/>
+                            <constraint firstItem="hHf-9v-IKr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="i5D-En-0xw"/>
+                            <constraint firstItem="eEm-Ll-DhG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="j7B-7U-tcz"/>
+                            <constraint firstItem="hHf-9v-IKr" firstAttribute="top" secondItem="eEm-Ll-DhG" secondAttribute="bottom" constant="30" id="lbr-eG-NBO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hHf-9v-IKr" secondAttribute="trailing" id="pMs-OE-Vco"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hHf-9v-IKr" secondAttribute="bottom" id="y0d-Ix-zkV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="eEm-Ll-DhG" id="Loc-F7-twj"/>
+                        <outlet property="answerlmageView" destination="3Al-Sm-Zsv" id="6AS-X3-B8f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
+        </scene>
+    </scenes>
+</document>
