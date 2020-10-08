@@ -23,7 +23,17 @@ class ViewController: UIViewController {
     
     @IBAction func ShuffluAction(_ sender: Any) {
         //1〜3の乱数
-        answerNumber = Int.random(in:0..<3)
+        //answerNumber = Int.random(in:0..<3)
+        
+        //新しいジャンケンの結果を一時的に格納する変数を設ける
+        var newAnswerNumber = 0
+        
+        //前回と異なる結果のみ採用
+        repeat{
+            newAnswerNumber = Int.random(in:0..<3)
+        }while answerNumber == newAnswerNumber
+        //新しいジャンケンの結果を格納
+        answerNumber = newAnswerNumber
         
         if answerNumber == 0{
         answerLabel.text = "グー"
